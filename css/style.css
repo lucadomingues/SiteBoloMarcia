@@ -1,0 +1,186 @@
+:root{
+    --rosa-claro: #fad4da;
+    --lilas: #5e3e96;
+    --vermelho: #d94877;
+}
+
+body{
+    background-color: white;
+    padding-top: 70px;
+}
+
+.navbar{
+    font-family: 'Courier'/*'monotype corsiva'*/;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1000;
+    background-color: white;
+}
+
+.navbar-brand img{
+    height: 40px;
+}
+
+.navbar a span{
+    font-size: 30px;
+    color: #c23663;
+}
+
+.navbar-collapse{
+    background-color: white;
+    padding: 0 15px;
+    border-radius: 0 0 8px 8px;
+}
+
+.navbar-nav li a{
+    font-size: 18px;
+    color: #c23663;
+    padding: 0 10px;
+}
+
+.navbar-nav li a:hover{
+    color: #b80a41;
+    border: 1px solid #c0446b;
+    border-bottom: none;
+    border-top: none;
+}
+
+/* HEADER COM O CARROSSEL */
+header{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-header{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* CENTRALIZANDO CONTEUDO */
+.carousel-caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.carousel-item img{
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+/* CARDAPIO */
+#cardapio-descricao{
+    font-family: 'monotype corsiva';
+    font-size: 20px;
+    margin: 0 5px;
+    color: rgb(90, 90, 90);
+}
+
+#div-cards-preco{
+    margin: 0 5px;
+}
+
+.cards-preco{
+    width: 365px;
+}
+
+.faixas-cardapio{
+    border: 2px dashed #ffc0cb;
+}
+
+.card-title {
+    color: #b23c9a;
+}
+
+.card-body ul li {
+    color: #5a5a5a;
+}
+
+.card {
+    background-color: #fff0f6;
+    border-radius: 1rem;
+    border: none;
+}
+
+/* SOBREPOSIÇÃO ESCURA DO FUNDO */
+.carousel .carousel-inner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.carousel-caption h1, .carousel-caption p{
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption .btn{
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.overlay{
+    width: 70%;
+}
+
+.galeria, #feedbacks{
+    padding: 25px 0;
+}
+
+#div-img-principal{
+    flex: 1;
+    max-width: 500px;
+}
+
+#div-desc-principal{
+    flex: 2;
+}
+
+.imgs-galeria img{
+    width: 100px;
+}
+
+.imgs-galeria{
+    cursor: pointer;
+    object-fit: cover;
+    scroll-snap-align: center;
+    transition: transform 0.2s ease;
+}
+
+.imgs-galeria img.ativo{
+    border: 3px solid #ff69b4;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+}
+
+@media (max-width: 768px) {
+    #detalhes-bolo {
+        text-align: center;
+    }
+
+    #detalhes-bolo ul {
+        padding-left: 0;
+    }
+
+    #detalhes-bolo blockquote {
+        font-size: 0.9rem;
+    }
+}
+
+.imgs-feedback{
+    max-width: 200px;
+    scroll-snap-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.658);
+    border-radius: 15px;
+}
+
+footer{
+    background-color: var(--lilas);
+}
