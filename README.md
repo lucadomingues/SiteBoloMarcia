@@ -1,6 +1,6 @@
 # 🍰 Bolos da Márcia – Sabor de Mãe
 
-Bem-vindo ao repositório oficial do site **Bolos da Márcia**!
+Bem-vindo ao repositório oficial do site **Bolo da Márcia**!
 
 Este projeto foi criado com carinho para divulgar os deliciosos bolos artesanais da Márcia, feitos com amor, tradição e um toque especial de mãe.
 
