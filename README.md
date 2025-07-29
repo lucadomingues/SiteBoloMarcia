@@ -30,7 +30,7 @@ O projeto utiliza uma identidade visual baseada em tons pastéis (rosa e lilás)
 
 ## 🔗 Acesse o site
 
-> Em breve: [https://bolosdamarcia.com.br](https://bolosdamarcia.com.br)  
+> Em breve: [https://bolosdamarcia.com.br](https://bolosdamarcia.com.br)
 > Ou acesse a versão local abrindo o arquivo `index.html` no navegador.
 
 ---
@@ -43,7 +43,7 @@ Este projeto é pessoal e feito com fins de aprendizado e divulgação. Caso des
 
 ## 👩‍🍳 Créditos
 
-Site desenvolvido por **Lucas Domingues Mendes**  
+Site desenvolvido por mim (**Lucas Domingues Mendes**)  
 Estudante de Análise e Desenvolvimento de Sistemas e filho da boleira mais talentosa de Birigui! ❤️
 
 ---
