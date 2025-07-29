@@ -30,7 +30,7 @@ O projeto utiliza uma identidade visual baseada em tons pastéis (rosa e lilás)
 
 ## 🔗 Acesse o site
 
-> Em breve: [https://bolosdamarcia.com.br](https://bolosdamarcia.com.br)
+> Em breve: [https://bolosdamarcia.com.br](https://bolosdamarcia.com.br)  
 > Ou acesse a versão local abrindo o arquivo `index.html` no navegador.
 
 ---
