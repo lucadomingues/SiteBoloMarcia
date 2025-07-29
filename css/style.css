@@ -15,34 +15,29 @@ body{
     padding-right: 20px;
     z-index: 1000;
     background-color: white;
+    border-bottom: 1px solid #dd8b96;
 }
 
 .navbar-brand img{
-    height: 40px;
-}
-
-.navbar a span{
-    font-size: 30px;
-    color: #c23663;
+    height: 50px;
 }
 
 .navbar-collapse{
     background-color: white;
-    padding: 0 15px;
     border-radius: 0 0 8px 8px;
 }
 
 .navbar-nav li a{
     font-size: 18px;
-    color: #c23663;
-    padding: 0 10px;
+    color: #ad1a49;
+    font-weight: bolder;
 }
 
 .navbar-nav li a:hover{
-    color: #b80a41;
-    border: 1px solid #c0446b;
+    color: #dd8b96;
     border-bottom: none;
     border-top: none;
+    transition: 0.3s;
 }
 
 /* HEADER COM O CARROSSEL */
@@ -58,7 +53,6 @@ header{
     overflow: hidden;
 }
 
-/* CENTRALIZANDO CONTEUDO */
 .carousel-caption{
     position: absolute;
     top: 50%;
@@ -73,52 +67,139 @@ header{
     width: 100%;
 }
 
+.btn-header{
+    background-color: rgb(243, 243, 243);
+}
+
+.btn-header:hover{
+    background-color: transparent;
+    border-color: rgb(243, 243, 243);
+    transition: 0.3s;
+}
+
 /* CARDAPIO */
+.cardapio{
+    padding: 30px 20px;
+    border-radius: 5px;
+}
+
+.section-cardapio{
+    background-image: url("../imagens/fundo-cardapio.png");
+}
+
+h3{
+    color: #ad1a49;
+}
+
 #cardapio-descricao{
     font-family: 'monotype corsiva';
     font-size: 20px;
-    margin: 0 5px;
     color: rgb(90, 90, 90);
+    margin-bottom: 2rem;
 }
 
-#div-cards-preco{
-    margin: 0 5px;
-}
-
-.cards-preco{
-    width: 365px;
-}
-
-.faixas-cardapio{
-    border: 2px dashed #ffc0cb;
-}
-
-.card-title {
-    color: #b23c9a;
-}
-
-.card-body ul li {
-    color: #5a5a5a;
-}
-
-.card {
-    background-color: #fff0f6;
+.card-sabores{
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,192,203,0.6);
     border-radius: 1rem;
-    border: none;
-}
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-/* SOBREPOSIÇÃO ESCURA DO FUNDO */
-.carousel .carousel-inner::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 1;
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
+.card-sabores:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.icon{
+    font-size: 2.5rem;
+}
+
+.titulo-sabores{
+    margin: 0.5rem 0 0.3rem;
+    color: #c66db0;
+}
+
+.subtitulo{
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: #5e3e96;
+}
+
+.lista-sabores{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    max-width: 250px;
+}
+
+.lista-sabores li{
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: left;
+}
+
+/* 2 colunas no card do meio*/
+.col-duas{
+    column-count: 2;
+    column-gap: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    word-break: break-word;
+    padding-inline: 0.5rem;
+}
+
+.btn-baixar-pdf{
+    background-color: #DC3545;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-baixar-pdf:hover{
+    background-color: #c41e2f;
+    color: white;
+}
+
+
+/* BOLOS NO POTE */
+.div-montagens{
+    display: flex;
+    justify-content: center;
+}
+
+.img-zoom img{
+    border-radius: 5px;
+    max-width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.img-zoom:hover img{
+    transform: scale(1.1);
+}
+
+.montagens-section{
+    margin-bottom: 50px;
+}
+
+.img-zoom{
+    max-width: 550px;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+/* GALERIA DE BOLOS */
 .carousel-caption h1, .carousel-caption p{
     text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
 }
@@ -131,7 +212,7 @@ header{
     width: 70%;
 }
 
-.galeria, #feedbacks{
+.galeria{
     padding: 25px 0;
 }
 
@@ -142,10 +223,24 @@ header{
 
 #div-desc-principal{
     flex: 2;
+    padding: 15px 0;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+#descricao-principal{
+    font-weight: bolder;
+    color: #505050;
+}
+
+#titulo-descricao{
+    color: #ad1a49;
+    margin-bottom: 20px;
 }
 
 .imgs-galeria img{
-    width: 100px;
+    width: 80px;
+    pointer-events: auto;
 }
 
 .imgs-galeria{
@@ -156,31 +251,151 @@ header{
 }
 
 .imgs-galeria img.ativo{
-    border: 3px solid #ff69b4;
+    border: 3px solid #69669d;
     box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
 }
 
-@media (max-width: 768px) {
-    #detalhes-bolo {
+.carrossel-bolos{
+    background-color: #ffe7f1;
+    border-radius: 3px;
+}
+
+/* Zoom nas miniaturas da galeria de bolos */
+.zoom-in{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.zoom-in:hover{
+    transform: scale(1.1);
+}
+
+/* Oculta todas as imagens do carrossel principal no desktop, exceto a ativa */
+.carousel-mobile img{
+    display: none;
+}
+
+.carousel-mobile img.active{
+    display: block;
+}
+
+
+/* SOBRE NOS */
+.section-sobre{
+    padding: 0 20px;
+}
+
+.div-sobre-nos{
+    justify-content: center;
+}
+
+.sobre-descricao{
+    max-width: 600px;
+}
+
+.sobre-foto{
+    max-width: 300px;
+}
+
+
+/* Frase para indicador */
+.deslize-indicador{
+    font-size: 0.9rem;
+    animation: pulseSeta 2s infinite;
+    color: #a44;
+}
+
+@keyframes pulseSeta{
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@media (max-width: 768px){
+    #detalhes-bolo{
         text-align: center;
     }
 
-    #detalhes-bolo ul {
+    #detalhes-bolo ul{
         padding-left: 0;
     }
 
-    #detalhes-bolo blockquote {
+    #detalhes-bolo blockquote{
         font-size: 0.9rem;
     }
-}
 
-.imgs-feedback{
-    max-width: 200px;
-    scroll-snap-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.658);
-    border-radius: 15px;
+    #div-desc-principal{
+        margin-top: -60px;
+    }
+
+    /* Responsividade coluna 2 cardapio */
+    .col-duas{
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile - Transforma o container num carrossel horizontal */
+    .carousel-mobile {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+    }
+
+    .carousel-mobile img {
+        display: block;
+        min-width: 100%;
+        scroll-snap-align: center;
+    }
+
+    /* Oculta o carrossel de miniaturas no mobile */
+    .carrossel-bolos {
+        display: none;
+    }
+
+    /* Bolos pote */
+    .montagens-section{
+        margin-top: -40px;
+    }
 }
 
 footer{
     background-color: var(--lilas);
+    font-size: 12px;
+    padding: 0 45px;
+}
+
+.whatsapp-float{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    width: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.whatsapp-float img:hover{
+    width: 45px;
+    transition: 0.3s;
+}
+
+.whatsapp-float.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Animação das sections */
+[data-anima]{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+}
+
+[data-anima].animado{
+    opacity: 1;
+    transform: translateY(0);
 }

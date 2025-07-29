@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
         <a class="navbar-brand d-flex align-items-center text-white" href="#">
-            <span><strong>Bolo da Márcia</strong></span>
+            <img src="imagens/logo.png" alt="logo" id="logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#bolos">Bolos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#produtos">Cardápio</a>
+                    <a class="nav-link" href="#cardapio">Cardápio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contato">Contato</a>
@@ -56,8 +56,7 @@
                 <h1 class="display-4 fw-bolder">Sabor de Mãe</h1>
                 <p class="lead">Bolos artesanais com um toque especial de carinho.</p>
                 <div class="d-flex justify-content-center gap-3 flex-wrap">
-                    <a href="https://wa.me/5518991800256" target="_blank" class="btn btn-success btn-lg px-4"><i class="fa-brands fa-whatsapp"></i> Fazer Encomenda</a>
-                    <a href="#produtos" class="btn btn-outline-light btn-lg px-4">Ver Cardápio</a>
+                    <a href="#cardapio" class="btn btn-lg btn-header">Ver Cardápio</a>
                 </div>
             </div>
             <!-- Controles de navegação -->
@@ -71,17 +70,31 @@
     </header>
 
     <!-- Galeria dos Bolos -->
-    <section class="galeria py-5" id="bolos">
+    <section class="galeria" id="bolos" data-anima>
         <div class="container">
+            <h3 id="titulo-descricao" class="fw-bold">BOLOS ARTESANAIS</h3>
             <!-- Imagem em destaque e descrição -->
-             <div id="bolo-destaque" class="mb-4 d-flex flex-column flex-md-row align-items-start gap-4">
+            <div id="bolo-destaque" class="mb-4 d-flex flex-column flex-md-row align-items-start gap-4">
                 <!-- Imagem -->
                 <div class="flex-shrink-0" id="div-img-principal">
-                    <img src="imagens/bolos/galeria1.png" class="img-fluid rounded shadow" id="imagem-principal" alt="Bolo em destaque">
+                    <div class="carousel-mobile">
+                        <img src="imagens/bolos/galeria1.png" class="img-fluid rounded shadow active" id="imagem-principal" alt="Bolo 1">
+                        <img src="imagens/bolos/galeria2.png" class="img-fluid rounded shadow" alt="Bolo 2">
+                        <img src="imagens/bolos/galeria3.png" class="img-fluid rounded shadow" alt="Bolo 3">
+                        <img src="imagens/bolos/galeria4.png" class="img-fluid rounded shadow" alt="Bolo 4">
+                        <img src="imagens/bolos/galeria5.png" class="img-fluid rounded shadow" alt="Bolo 5">
+                        <img src="imagens/bolos/galeria6.png" class="img-fluid rounded shadow" alt="Bolo 6">
+                        <img src="imagens/bolos/galeria7.png" class="img-fluid rounded shadow" alt="Bolo 7">
+                        <img src="imagens/bolos/galeria8.png" class="img-fluid rounded shadow" alt="Bolo 8">
+                        <img src="imagens/bolos/galeria9.png" class="img-fluid rounded shadow" alt="Bolo 9">
+                        <img src="imagens/bolos/galeria10.png" class="img-fluid rounded shadow" alt="Bolo 10">
+                        <img src="imagens/bolos/galeria11.png" class="img-fluid rounded shadow" alt="Bolo 11">
+                        <img src="imagens/bolos/galeria12.png" class="img-fluid rounded shadow" alt="Bolo 12">
+                    </div>
+                    <p class="text-center text-muted mt-2 d-md-none deslize-indicador">⬅️ Deslize para ver mais ➡️</p>
                 </div>
                 <!-- Descrição -->
                 <div class="flex-grow-1" id="div-desc-principal">
-                    <h5 id="titulo-principal" class="fw-bold">Bolos Artesanais da Márcia</h5>
                     <p class="mt-3" id="descricao-principal">
                         Cada bolo é feito com muito carinho, ingredientes selecionados e o verdadeiro sabor de mãe.
                     </p>
@@ -93,229 +106,214 @@
                     <blockquote class="fst-italic text-secondary mt-3">
                         “Feito com amor, fé e o toque especial da Márcia 💖”
                     </blockquote>
-                    <a href="https://wa.me/5518991800256" target="_blank" class="btn btn-success mt-3">
-                        Fazer um pedido 💬
+                    <a href="https://wa.me/5518991800256" target="_blank" class="btn btn-success mt-3" style="transition: 0.3s">
+                        <i class="fab fa-whatsapp"></i> Fazer um pedido 💬
                     </a>
                 </div>
             </div>
 
             <!-- Carrossel com as imagens dos bolos -->
-            <div class="position-relative">
+            <div class="position-relative carrossel-bolos">
                 <div class="d-flex overflow-auto gap-3 p-2" style="scroll-snap-type: x mandatory;">
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria1.png" class="img-fluid rounded shadow-sm" alt="Bolo 1">
-                        </a>
+                        <img src="imagens/bolos/galeria1.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 1">
                     </div>
                     
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria2.jpg" class="img-fluid rounded shadow-sm" alt="Bolo 2">
-                        </a>
+                        <img src="imagens/bolos/galeria2.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 2">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria3.png" class="img-fluid rounded shadow-sm" alt="Bolo 3">
-                        </a>
+                        <img src="imagens/bolos/galeria3.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 3">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria4.png" class="img-fluid rounded shadow-sm" alt="Bolo 4">
-                        </a>
+                        <img src="imagens/bolos/galeria4.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 4">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria5.JPEG" class="img-fluid rounded shadow-sm" alt="Bolo 5">
-                        </a>
+                        <img src="imagens/bolos/galeria5.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 5">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria6.png" class="img-fluid rounded shadow-sm" alt="Bolo 6">
-                        </a>
+                        <img src="imagens/bolos/galeria6.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 6">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria7.png" class="img-fluid rounded shadow-sm" alt="Bolo 7">
-                        </a>
+                        <img src="imagens/bolos/galeria7.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 7">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria8.JPEG" class="img-fluid rounded shadow-sm" alt="Bolo 8">
-                        </a>
+                        <img src="imagens/bolos/galeria8.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 8">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria9.png" class="img-fluid rounded shadow-sm" alt="Bolo 9">
-                        </a>
+                        <img src="imagens/bolos/galeria9.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 9">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria10.JPEG" class="img-fluid rounded shadow-sm" alt="Bolo 10">
-                        </a>
+                        <img src="imagens/bolos/galeria10.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 10">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria11.png" class="img-fluid rounded shadow-sm" alt="Bolo 11">
-                        </a>
+                        <img src="imagens/bolos/galeria11.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 11">
                     </div>
 
                     <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria12.png" class="img-fluid rounded shadow-sm" alt="Bolo 12">
-                        </a>
-                    </div>
-
-                    <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria13.png" class="img-fluid rounded shadow-sm" alt="Bolo 13">
-                        </a>
-                    </div>
-
-                    <div class="flex-shrink-0 imgs-galeria">
-                        <a href="#bolos">
-                            <img src="imagens/bolos/galeria14.png" class="img-fluid rounded shadow-sm" alt="Bolo 14">
-                        </a>
+                        <img src="imagens/bolos/galeria12.png" class="img-fluid rounded shadow-sm zoom-in" alt="Bolo 12">
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="montagens-section container py-3" data-anima>
+        <div class="row align-items-center div-montagens">
+            <div class="img-zoom">
+                <img src="imagens/bolos/bolo-pote1.png" alt="Bolo Pote">
+            </div>
+            <div class="img-zoom">
+                <img src="imagens/bolos/bolos-caseiros.png" alt="Sabores dos bolos no pote">
+            </div>
+                <!--
+            <div class="col-md-7">
+                <h3 class="mb-2">BOLOS NO POTE</h3>
+                <p>
+                    Sabe aquele docinho que faz carinho na alma? Então… é esse aqui! 😍<br>
+                    Nossos bolos no pote são uma explosão de sabor em cada colherada: massa fofinha, recheio cremoso e aquele toque especial de amor da Márcia 💖
+                </p>
+                <div id="bolo-pote-desktop">
+                    <p>Perfeitos pra dar de presente (ou devorar sozinho, a gente não julga 😋), eles são a dose certa de alegria que o seu dia estava precisando!</p>
+                    <p><strong>Apenas R$ 12,00 cada!</strong> Corre que é sucesso! 🚀🍰🍫</p>
+                </div>
+            </div>
+            <div class="col-md-5 img-bolo-pote">
+                <img src="imagens/bolos/bolo-pote.png" alt="Sabores dos bolos no pote" class="img-fluid rounded shadow">
+            </div>
+
+            <div id="bolo-pote-celular">
+                <p>Perfeitos pra dar de presente (ou devorar sozinho, a gente não julga 😋), eles são a dose certa de alegria que o seu dia estava precisando!</p>
+                <p><strong>Apenas R$ 12,00 cada!</strong> Corre que é sucesso! 🚀🍰🍫</p>
+            </div>
+            -->
         </div>
     </section>
 
     <!-- Cardápio -->
-    <section class="py-5">
+    <section class="section-cardapio" id="cardapio" data-anima>
         <div class="container text-center cardapio">
 
-            <h2 class="fw-bold mb-2">CARDÁPIO DE BOLOS</h2>
+            <h3 class="fw-bold mb-2">CARDÁPIO DE BOLOS</h3>
             <p id="cardapio-descricao">Inclui decoração em chantilly. Temas personalizados sob consulta.</p>
 
             <!-- Cards de preços -->
             <div class="row g-4 justify-content-center" id="div-cards-preco">
-                <!-- Faixa 55 -->
-                <div class="col-md-3 cards-preco">
-                    <div class="p-4 rounded-4 shadow-sm bg-white border border-pink faixas-cardapio">
-                        <div class="fs-1">🧁</div>
-                        <h5 class="fw-bold text-secondary mt-2">R$ 55,00 / Kg</h5>
-                        <ul class="list-unstyled mt-3 mb-0 text-muted">
-                            <li>Creme com Abacaxi ou Côco</li>
-                            <li>Creme de Chocolate</li>
-                            <li>Creme de Chocolate Branco</li>
+                <!-- Card Clássicos (55) -->
+                <div class="col-12 col-md-4">
+                    <div class="card-sabores h-100">
+                        <div class="icon">🧁</div>
+                        <h5 class="titulo-sabores">R$ 55,00 / Kg</h5>
+                        <h6 class="subtitulo">Clássicos</h6>
+                        <ul class="lista-sabores">
+                            <li>🧁 Creme com Abacaxi</li>
+                            <li>🧁 Creme com Côco</li>
+                            <li>🧁 Creme de Chocolate</li>
+                            <li>🧁 Creme de Chocolate Branco</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Faixa 60 -->
-                <div class="col-md-3 cards-preco">
-                    <div class="p-4 rounded-4 shadow-sm bg-white border border-pink faixas-cardapio">
-                        <div class="fs-1">🍰</div>
-                        <h5 class="fw-bold text-secondary mt-2">R$ 60,00 / Kg</h5>
-                        <ul class="list-unstyled mt-3 mb-0 text-muted">
-                            <li>Beijinho</li>
-                            <li>Brigadeiro</li>
-                            <li>Brigadeiro Branco</li>
-                            <li>Brigadeiro Preto/Branco</li>
-                            <li>Ninho</li>
-                            <li>Ninho com Abacaxi</li>
-                            <li>Ouro Branco</li>
-                            <li>Paçoca</li>
-                            <li>Prestígio</li>
-                            <li>Doce de Leite com ameixa</li>
-                            <li>Mousse de Doce de Leite</li>
+                <!-- Card Tradicionais (60) -->
+                <div class="col-12 col-md-4">
+                    <div class="card-sabores h-100">
+                        <div class="icon">🍰</div>
+                        <h5 class="titulo-sabores">R$ 60,00 / Kg</h5>
+                        <h6 class="subtitulo">Doces Tradicionais</h6>
+                        <ul class="lista-sabores col-duas">
+                            <li>🍰 Doce de Leite com Ameixa</li>
+                            <li>🍰 Mousse Doce de Leite</li>
+                            <li>🍰 Brigadeiro Preto com Branco</li>
+                            <li>🍰 Ninho com Abacaxi</li>
+                            <li>🍰 Brigadeiro Branco</li>
+                            <li>🍰 Beijinho</li>
+                            <li>🍰 Brigadeiro</li>
+                            <li>🍰 Ninho</li>
+                            <li>🍰 Ouro Branco</li>
+                            <li>🍰 Paçoca</li>
+                            <li>🍰 Prestígio</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Faixa 70 -->
-                <div class="col-md-3 cards-preco">
-                    <div class="p-4 rounded-4 shadow-sm bg-white border border-pink faixas-cardapio">
-                        <div class="fs-1">🎂</div>
-                        <h5 class="fw-bold text-secondary mt-2">R$ 70,00 / Kg</h5>
-                        <ul class="list-unstyled mt-3 mb-0 text-muted">
-                            <li>Ninho com Frutas Vermelhas</li>
-                            <li>Ninho com Morango</li>
-                            <li>Ninho Trufado</li>
-                            <li>Mousse de Chocolate Branco ou Preto</li>
+                <!-- Card Especiais (70) -->
+                <div class="col-12 col-md-4">
+                    <div class="card-sabores h-100">
+                        <div class="icon">🎂</div>
+                        <h5 class="titulo-sabores">R$ 70,00 / Kg</h5>
+                        <h6 class="subtitulo">Especiais</h6>
+                        <ul class="lista-sabores">
+                            <li>🎂 Ninho com Frutas Vermelhas</li>
+                            <li>🎂 Ninho com Morango</li>
+                            <li>🎂 Ninho Trufado</li>
+                            <li>🎂 Mousse Chocolate Branco</li>
+                            <li>🎂 Mousse Chocolate Preto</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- FeedBacks -->
-    <section id="feedbacks">
-        <div class="container">
-            <h2 class="text-center mb-4">O que nossos clientes estão dizendo 💬</h2>
-            
-            <!-- Carrossel com os prints de feedbacks -->
-            <div class="position-relative">
-                <div class="d-flex overflow-auto gap-3 p-2" style="scroll-snap-type: x mandatory;">
-                    <div class="flex-shrink-0 imgs-feedback">
-                        <img src="imagens/feedbacks/feed1.jpeg" class="img-fluid rounded shadow-sm" alt="feedback 1">
-                    </div>
-
-                    <div class="flex-shrink-0 imgs-feedback">
-                        <img src="imagens/feedbacks/feed1.2.jpeg" class="img-fluid rounded shadow-sm" alt="feedback 1">
-                    </div>
-
-                    <div class="flex-shrink-0 imgs-feedback">
-                        <img src="imagens/feedbacks/feed2.jpeg" class="img-fluid rounded shadow-sm" alt="feedback 1">
-                    </div>
-
-                    <div class="flex-shrink-0 imgs-feedback">
-                        <img src="imagens/feedbacks/feed3.jpeg" class="img-fluid rounded shadow-sm" alt="feedback 1">
-                    </div>
-
-                    <div class="flex-shrink-0 imgs-feedback">
-                        <img src="imagens/feedbacks/feed4.jpeg" class="img-fluid rounded shadow-sm" alt="feedback 1">
-                    </div>
-                </div>
+            <div class="text-center mt-4">
+                <a href="imagens/cardapio-bolos-da-marcia.pdf" download target="_blank" class="btn btn-baixar-pdf">
+                    📥 Baixar Cardápio em PDF
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Contato -->
-    <section id="contato" class="py-5 bg-light text-center">
+    <section id="contato" class="py-5 text-center" data-anima>
         <div class="container">
-            <h2 class="mb-4">Fale com a gente</h2>
+            <h3 class="fw-bold mb-4">Fale com a gente</h3>
             <p class="lead mb-4">Entre em contato para fazer sua encomenda ou tirar dúvidas!</p>
 
             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="https://wa.me/5518991800256" target="_blank" class="btn btn-success btn-lg px-4">
+                <a href="https://wa.me/5518991800256" target="_blank" class="btn btn-success btn-lg px-4" style="transition: 0.3s">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-                <a href="https://instagram.com/seuinsta" target="_blank" class="btn btn-outline-danger btn-lg px-4">
+                <a href="https://www.instagram.com/bolodamarciaconfeitaria/" target="_blank" class="btn btn-outline-danger btn-lg px-4" style="transition: 0.3s">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
             </div>
 
             <div class="mt-4 text-muted small">
-                <p><strong>Horário de atendimento:</strong> Segunda a Sábado, das 8h às 18h</p>
-                <p><strong>Prazo mínimo para encomendas:</strong> 2 dias de antecedência</p>
+                <p><strong>Estamos disponíveis todos os dias.</strong></p>
+                <p><strong>Prazo mínimo para encomendas:</strong> 2 dias de antecedência.</p>
             </div>
         </div>
     </section>
 
     <!-- Sobre Nós -->
-    <section class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-3">Sobre Nós</h2>
-            <p>Somos apaixonados por confeitaria e queremos adoçar seus momentos com receitas feitas com amor. Tudo começou com a Márcia e seu dom de transformar ingredientes em felicidade!</p>
+    <section class="py-5 section-sobre" id="sobre" data-anima>
+        <div class="row div-sobre-nos align-items-center">
+            <h3 class="fw-bold mb-3 text-center">Sobre Nós</h3>
+            <p class="sobre-descricao">
+                No Bolo da Márcia, cada receita é feita com carinho, cuidado e um toque de amor de mãe.<br>
+                Márcia é a confeiteira por trás de cada bolo. Desde o preparo da massa até a decoração final, tudo é feito por ela, com dedicação e muito capricho.<br><br>
+                Aqui, você encontra bolos artesanais de verdade, com sabor de casa e tradição em cada fatia.
+            </p>
+
+            <img src="imagens/marcia.png" alt="Foto Animada Marcia" class="sobre-foto">
         </div>
     </section>
 
     <!-- Rodapé -->
     <footer class="text-white text-center py-3">
-        <p class="mb-0">Deus é Fiel • &copy; 2025 Bolo da Márcia</p>
+        <p class="mb-0">Bolo da Márcia &copy; 2025 - Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5518991800256" target="_blank" class="whatsapp-float" id="whatsapp-btn">
+        <img src="imagens/whatsapp-icon.png" alt="Fale conosco" width="40">
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
